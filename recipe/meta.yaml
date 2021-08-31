@@ -1,5 +1,5 @@
 {% set name = "parquet-tools" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: c99d6dbf53936baaa06f38bcc50ca8402523656dc4beb26dc1d62be3d10e5ff7
+  sha256: 0e42adc7ecf0e0332e51607ba43144e3d64530cdcb20c09a832c1d5badf03651
 
 build:
   number: 0
