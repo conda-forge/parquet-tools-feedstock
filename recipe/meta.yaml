@@ -10,7 +10,7 @@ source:
   sha256: 8deb439408d53ee7d2a89568c553e9e619915a13a452e0dd72e67a49e5f0867a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - parquet-tools = parquet_tools.cli:main
@@ -18,25 +18,18 @@ build:
 
 requirements:
   host:
-    - boto3 >=1.13,<2.0
-    - colorama >=0.4.3,<0.5.0
-    - halo >=0.0.29,<0.0.30
-    - pandas >=1,<2
-    - pip
+    - python >=3.8,<4.0
     - poetry-core >=1.0.0
-    - pyarrow
-    - python >=3.8
-    - tabulate >=0.8.7,<0.9.0
-    - thrift >=0.13.0,<0.14.0
+    - pip
   run:
-    - boto3 >=1.13,<2.0
-    - colorama >=0.4.3,<0.5.0
-    - halo >=0.0.29,<0.0.30
-    - pandas >=1,<2
+    - python >=3.8,<4.0
+    - halo >=0.0.29,<1
     - pyarrow
-    - python >=3.8
-    - tabulate >=0.8.7,<0.9.0
-    - thrift >=0.13.0,<0.14.0
+    - pandas >=1,<2
+    - tabulate >=0.8.7,<1
+    - boto3 >=1.13,<2
+    - thrift >=0.13.0,<1
+    - colorama >=0.4.3,<1
 
 test:
   imports:

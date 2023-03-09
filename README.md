@@ -1,11 +1,11 @@
-About parquet-tools
-===================
+About parquet-tools-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parquet-tools-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/ktrueda/parquet-tools
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/parquet-tools-feedstock/blob/main/LICENSE.txt)
 
 Summary: Easy install parquet-tools
 
