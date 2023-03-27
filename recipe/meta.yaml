@@ -1,5 +1,5 @@
 {% set name = "parquet-tools" %}
-{% set version = "0.2.12" %}
+{% set version = "0.2.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 8deb439408d53ee7d2a89568c553e9e619915a13a452e0dd72e67a49e5f0867a
+  sha256: 22451d52dda400ec063d2145a652fbd6bbe28a8b18f23f7dbda77a401f0e6f25
 
 build:
-  number: 1
+  number: 0
   noarch: python
   entry_points:
     - parquet-tools = parquet_tools.cli:main
