@@ -6,11 +6,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 7bad2ad38f2381afde9d109577199d953946a904b0d74b2f074e47040673f60a
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - parquet-tools = parquet_tools.cli:main
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8,<4.0
+    - python {{ python_min }}
     - poetry-core >=1.0.0
     - pip
   run:
-    - python >=3.8,<4.0
+    - python >={{ python_min }},<4.0
     - halo >=0.0.29,<1
     - pyarrow
     - pandas >=1,<3
@@ -32,6 +32,8 @@ requirements:
     - colorama >=0.4.3,<1
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - parquet_tools
     - parquet_tools.commands
